@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Puzzle Blocker",
+    "version": "1.0",
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "*://*.twitter.com/*",
+        "*://*.instagram.com/*",
+        "*://*.youtube.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.twitter.com/*",
+                "*://*.instagram.com/*",
+                "*://*.youtube.com/*",
+                "*://*.tiktok.com/*",
+                "*://*.reddit.com/*",
+                "*://*.facebook.com/*",
+                "*://*.linkedin.com/*"
+            ],
+            "js": ["contentScript.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_icon": "icon.png"
+    }
+}
